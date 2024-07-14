@@ -1,0 +1,65 @@
+html {
+  color-scheme: dark;
+  font-family: system-ui;
+
+  body {
+    margin: 0;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 1em;
+    background-color: #333;
+
+    h1 {
+      margin: 0;
+    }
+
+    .status {
+      margin: 0;
+      background-color: #222;
+
+      &:has(::text) {
+        padding: .5em;
+      }
+    }
+
+    label {
+      display: contents;
+
+      input {
+        direction: rtl;
+      }
+    }
+  }
+
+  article.exports {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    align-items: center;
+    justify-content: start;
+    justify-items: start;
+    gap: .5em;
+    padding: .5em;
+
+    &:not(:has(section)) {
+      display: none;
+    }
+
+    section {
+      display: contents;
+
+      :first-child {
+        grid-column-start: 1;
+      }
+
+      input {
+        min-width: 0;
+        width: min-content;
+      }
+    }
+  }
+}
