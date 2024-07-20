@@ -50,7 +50,7 @@ export fn modifyMap(state: *MapState) *MapState {
   const numHexes = state.width * state.height;
 
   for (0..numHexes) |i| {
-    state.hexState[i] = @enumFromInt(@intFromEnum(state.hexState[i]) + 1 % @intFromEnum(HexState.tree));
+    state.hexState[i] = @enumFromInt((@intFromEnum(state.hexState[i]) + 1) % @intFromEnum(HexState.tree));
   }
 
   return state;

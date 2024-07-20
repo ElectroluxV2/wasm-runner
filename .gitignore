@@ -7,15 +7,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+node_modules/
+dist/
+dist-ssr/
 *.local
-.zig-cache
-zig-out
-target
-pkg
+.zig-cache/
+zig-out/
+target/
+pkg/
 .cargo
+bin/
+obj/
 
 # Editor directories and files
 .vscode/*
@@ -25,5 +27,4 @@ pkg
 *.suo
 *.ntvs*
 *.njsproj
-*.sln
 *.sw?
