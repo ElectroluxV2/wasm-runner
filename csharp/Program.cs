@@ -8,7 +8,7 @@ using u8 = byte;
 
 using var engine = new Engine();
 
-using var module = Module.FromFile(engine, "../../../../zig/zig-out/bin/test.wasm");
+using var module = Module.FromFile(engine, "../../../../zig/zig-out/bin/lib.wasm");
 
 using var linker = new Linker(engine);
 using var store = new Store(engine);

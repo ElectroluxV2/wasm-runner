@@ -15,8 +15,8 @@ pub fn build(b: *std.Build) void {
   const release = b.option(bool, "release", "Release WASM for production") orelse false;
 
   const exe = b.addExecutable(.{
-    .name = "test",
-    .root_source_file = b.path("test.zig"),
+    .name = "lib",
+    .root_source_file = b.path("lib.zig"),
     .target = if (release) wasmProdTarget else promtTarget,
     .optimize = if (release) wasmProdOptimize else promotOptimize,
   });
